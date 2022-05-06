@@ -1,0 +1,28 @@
+.drag-box{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+}
+#bounding-box{
+    width: 500px;
+    height: 500px;
+    border: solid 1px black;
+}
+.drag-item{
+    padding: 1em;
+    border: solid 1px gray;
+    background-color: white;
+}
+.cdk-drag-preview{
+    background-color: gainsboro;
+    box-shadow: 0xp 0xp 8xp 2px gainsboro;
+}
+.cdk-drag-placeholder{
+    opacity: 0;
+}
+.cdk-drag-animating{
+    transition: transform 200ms cubic-bezier(0,0,0.2,0);
+}
+.cdk-drop-list-dragging .cdk-drag{
+    transition: transform 200ms cubic-bezier(0,0,0.2,0);
+}

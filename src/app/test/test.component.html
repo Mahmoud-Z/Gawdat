@@ -1,0 +1,21 @@
+
+<!-- <div id="bounding-box"><div cdkDrag cdkDragLockAxis="y" cdkDragBoundary="#bounding-box" class="drag-box">safasdasf</div></div> -->
+
+<!-- <div cdkDropList (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="ownedAnimals">
+    <div cdkDrag class="drag-item" *ngFor="let i of ownedAnimals">
+        {{i}}
+    </div>
+</div> -->
+
+<p>ownedAnimals</p>
+<div id="ownedAnimals" cdkDropList [cdkDropListConnectedTo]="['animalsWishList']" (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="ownedAnimals">
+    <div cdkDrag class="drag-item" *ngFor="let i of ownedAnimals">
+        {{i}}
+    </div>
+</div>
+<p>animalsWishList</p>
+<div id="animalsWishList" cdkDropList [cdkDropListConnectedTo]="['ownedAnimals']" (cdkDropListDropped)="onDrop($event)" [cdkDropListData]="animalsWishList">
+    <div cdkDrag class="drag-item" *ngFor="let i of animalsWishList">
+        {{i}}
+    </div>
+</div>
